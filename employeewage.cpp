@@ -15,5 +15,14 @@ int main(){
         cout<<"Attendance : 1"<<endl<<"Employee is present"<<endl;
     }
 
-    
+}
+
+        //cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
+        cout<<"Daily wage of an employee is "<<20*8<<endl;
+    }
+    else{
+        //cout<<"Attendance : 1"<<endl<<"Employee is present"<<endl;
+        cout<<"Half day wage of an employee is "<<20*4<<endl;
+    }
+
 }
