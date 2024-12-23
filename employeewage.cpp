@@ -3,8 +3,6 @@
 #include<ctime>
 using namespace std;
 int main(){
-    // int x=time(0);
-    // cout<<x;
     cout<<"Welcome to employeewage computation"<<endl;
     srand(time(0));
     int n=rand()%2;
@@ -13,9 +11,9 @@ int main(){
     }
     else{
         cout<<"Attendance : 1"<<endl<<"Employee is present"<<endl;
-    }
 
-    
+       cout<<"Daily wage of an employee is "<<20*8<<endl;
+    }
 }
 
 
