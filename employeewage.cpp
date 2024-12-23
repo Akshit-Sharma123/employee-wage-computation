@@ -14,9 +14,7 @@ int main(){
     //else{
      //   cout<<"Attendance : 1"<<endl<<"Employee is present"<<endl;
     //}
-
-      if(n==0){
-
+    if(n==0){
         //cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
         cout<<"Daily wage of an employee is "<<20*8<<endl;
     }
