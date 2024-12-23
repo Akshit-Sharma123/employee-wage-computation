@@ -4,24 +4,28 @@
 using namespace std;
 int main(){
     cout<<"Welcome to employeewage computation"<<endl;
+    int ans=0;
+    for(int i=0;i<20;i++){
     srand(time(0));
     int n=rand()%2;
     switch(n){
         case 0:
-        cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
+        //cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
         break;
         case 1:
          int d=rand()%2;
         switch(d==0){
         case 0:
-        cout<<"Daily wage of an employee is "<<20*8<<endl;
+        //cout<<"Daily wage of an employee is "<<20*8<<endl;
+        ans=ans+20*8;
         break;
         case 1:
-        cout<<"Part time wage of an employee is "<<20*4<<endl;
-       
+        //cout<<"Part time wage of an employee is "<<20*4<<endl;
+        ans=ans+20*4;
         }
     }
-
+    }
+    cout<<"Monthly wage of an employee is "<<ans<<endl;
     
 }
 
