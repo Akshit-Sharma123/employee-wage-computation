@@ -14,13 +14,29 @@ int main(){
     //else{
      //   cout<<"Attendance : 1"<<endl<<"Employee is present"<<endl;
     //}
-    if(n==0){
+   // if(n==0){
         //cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
-        cout<<"Daily wage of an employee is "<<20*8<<endl;
-    }
-    else{
+     //   cout<<"Daily wage of an employee is "<<20*8<<endl;
+    //}
+    //else{
         //cout<<"Attendance : 1"<<endl<<"Employee is present"<<endl;
-        cout<<"Half day wage of an employee is "<<20*4<<endl;
+      //  cout<<"Half day wage of an employee is "<<20*4<<endl;
+
+    // if(n==0){
+    //     //cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
+    //     cout<<"Daily wage of an employee is "<<20*8<<endl;
+    // }
+    // else{
+    //     //cout<<"Attendance : 1"<<endl<<"Employee is present"<<endl;
+    //     cout<<"Half day wage of an employee is "<<20*4<<endl;
+    // }
+    //uc4
+    switch(n){
+        case 0:
+        cout<<"Daily wage of an employee is "<<20*8<<endl;
+        break;
+        case 1:
+        cout<<"Part time wage of an employee is "<<20*4<<endl;
     }
 
 }
