@@ -2,42 +2,64 @@
 #include<cstdlib>
 #include<ctime>
 using namespace std;
-int main(){
-    cout<<"Welcome to employeewage computation"<<endl;
-    int ans=0;
-    int hr=0;
-    for(int i=0;i<20;i++){
-    srand(time(0));
-    int n=rand()%2;
-    switch(n){
-        case 0:
-        //cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
-        break;
-        case 1:
-        {
-         int d = rand() % 2;
-        switch(d){
-
-        case 0:
-        {
-        int fullHr=0;
+class Employee{
+    public :
+    int checkAttendance(){
+        int n=rand()%2;
+        return n;
+    }
+    int checkPartOrFull(){
+        int n=rand()%2;
+        return n;
+    }
+    void calFullTime(int &ans , int &hr){
+      int fullHr=0;
         while(hr != 100 && fullHr != 8){
              fullHr++;
              ans = ans + 20;
              hr++;
         }
-        
-        break;
-        }
+    }
 
-        case 1:
-        int partHr = 0;
+
+    void calPartTime(int &ans,int &hr){
+         int partHr = 0;
 
         while(hr != 100 && partHr != 4){
             partHr++;
             ans = ans + 20;
             hr = hr++;
+        }   
+    }
+};
+int main(){
+    cout<<"Welcome to employeewage computation"<<endl;
+    int ans=0;
+    int hr=0;
+    Employee m;
+    for(int i=0;i<20;i++){
+    srand(time(0));
+    
+    int n=m.checkAttendance();
+
+    switch(n){
+        case 0:
+        
+        break;
+        case 1:
+        {
+         int d = m.checkPartOrFull();
+        switch(d){
+
+        case 0:
+        {
+        m.calFullTime(ans,hr);
+        
+        break;
         }
+
+        case 1:
+          m.calPartTime(ans,hr);
         }
     }
     }
