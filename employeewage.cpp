@@ -2,20 +2,34 @@
 #include<cstdlib>
 #include<ctime>
 using namespace std;
+class Employee{
+    public :
+    int checkAttendance(){
+        int n=rand()%2;
+        return n;
+    }
+    int checkPartOrFull(){
+        int n=rand()%2;
+        return n;
+    }
+};
 int main(){
     cout<<"Welcome to employeewage computation"<<endl;
     int ans=0;
     int hr=0;
+    Employee m;
     for(int i=0;i<20;i++){
     srand(time(0));
-    int n=rand()%2;
+    
+    int n=m.checkAttendance();
+
     switch(n){
         case 0:
-        //cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
+        
         break;
         case 1:
         {
-         int d = rand() % 2;
+         int d = m.checkPartOrFull();
         switch(d){
 
         case 0:
