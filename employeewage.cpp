@@ -12,6 +12,25 @@ class Employee{
         int n=rand()%2;
         return n;
     }
+    void calFullTime(int &ans , int &hr){
+      int fullHr=0;
+        while(hr != 100 && fullHr != 8){
+             fullHr++;
+             ans = ans + 20;
+             hr++;
+        }
+    }
+
+
+    void calPartTime(int &ans,int &hr){
+         int partHr = 0;
+
+        while(hr != 100 && partHr != 4){
+            partHr++;
+            ans = ans + 20;
+            hr = hr++;
+        }   
+    }
 };
 int main(){
     cout<<"Welcome to employeewage computation"<<endl;
@@ -34,24 +53,13 @@ int main(){
 
         case 0:
         {
-        int fullHr=0;
-        while(hr != 100 && fullHr != 8){
-             fullHr++;
-             ans = ans + 20;
-             hr++;
-        }
+        m.calFullTime(ans,hr);
         
         break;
         }
 
         case 1:
-        int partHr = 0;
-
-        while(hr != 100 && partHr != 4){
-            partHr++;
-            ans = ans + 20;
-            hr = hr++;
-        }
+          m.calPartTime(ans,hr);
         }
     }
     }
