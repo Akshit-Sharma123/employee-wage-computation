@@ -13,23 +13,31 @@ class Employee{
         return n;
     }
     void calFullTime(int &ans , int &hr){
-      int fullHr=0;
-        while(hr != 100 && fullHr != 8){
-             fullHr++;
-             ans = ans + 20;
-             hr++;
-        }
+    //   int fullHr=0;
+    //     while(hr != 100 && fullHr != 8){
+    //          fullHr++;
+    //          ans = ans + 20;
+    //          hr++;
+    //     }
+    if(hr+8>100){
+        int h=(hr+8)-100;
+        ans=ans+20*(h);
+    }
+    else{
+        ans=ans+20*8;
+    }
+
     }
 
 
     void calPartTime(int &ans,int &hr){
-         int partHr = 0;
-
-        while(hr != 100 && partHr != 4){
-            partHr++;
-            ans = ans + 20;
-            hr = hr++;
-        }   
+         if(hr+4>100){
+        int h=(hr+4)-100;
+        ans=ans+20*(h);
+    }
+    else{
+        ans=ans+20*4;
+    }
     }
 };
 int main(){
