@@ -5,6 +5,7 @@ using namespace std;
 int main(){
     cout<<"Welcome to employeewage computation"<<endl;
     int ans=0;
+    int hr=0;
     for(int i=0;i<20;i++){
     srand(time(0));
     int n=rand()%2;
@@ -13,16 +14,32 @@ int main(){
         //cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
         break;
         case 1:
-         int d=rand()%2;
-        switch(d==0){
+        {
+         int d = rand() % 2;
+        switch(d){
+
         case 0:
-        //cout<<"Daily wage of an employee is "<<20*8<<endl;
-        ans=ans+20*8;
-        break;
-        case 1:
-        //cout<<"Part time wage of an employee is "<<20*4<<endl;
-        ans=ans+20*4;
+        {
+        int fullHr=0;
+        while(hr != 100 && fullHr != 8){
+             fullHr++;
+             ans = ans + 20;
+             hr++;
         }
+        
+        break;
+        }
+
+        case 1:
+        int partHr = 0;
+
+        while(hr != 100 && partHr != 4){
+            partHr++;
+            ans = ans + 20;
+            hr = hr++;
+        }
+        }
+    }
     }
     }
     cout<<"Monthly wage of an employee is "<<ans<<endl;
