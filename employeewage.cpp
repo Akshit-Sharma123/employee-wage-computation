@@ -3,37 +3,47 @@
 #include<ctime>
 using namespace std;
 int main(){
-    // int x=time(0);
-    // cout<<x;
     cout<<"Welcome to employeewage computation"<<endl;
+    int ans=0;
+    int hr=0;
+    for(int i=0;i<20;i++){
     srand(time(0));
     int n=rand()%2;
-    // if(n==0){
-    //     //cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
-    //     cout<<"Daily wage of an employee is "<<20*8<<endl;
-    // }
-    // else{
-    //     //cout<<"Attendance : 1"<<endl<<"Employee is present"<<endl;
-    //     cout<<"Half day wage of an employee is "<<20*4<<endl;
-    // }
-    //uc4
-    // switch(n){
-    //     case 0:
-    //     cout<<"Daily wage of an employee is "<<20*8<<endl;
-    //     break;
-    //     case 1:
-    //     cout<<"Part time wage of an employee is "<<20*4<<endl;
-    // }
-
-    //uc5
-    //calculating wages for a month
     switch(n){
         case 0:
-        cout<<"Full time monthly wage of an employee is "<<20*20*8<<endl;
+        //cout<<"Attendance : 0"<<endl<<"Employee is absent"<<endl;
         break;
         case 1:
-        cout<<"Part time monthly wage of an employee is "<<20*20*4<<endl;
+        {
+         int d = rand() % 2;
+        switch(d){
+
+        case 0:
+        {
+        int fullHr=0;
+        while(hr != 100 && fullHr != 8){
+             fullHr++;
+             ans = ans + 20;
+             hr++;
+        }
+        
+        break;
+        }
+
+        case 1:
+        int partHr = 0;
+
+        while(hr != 100 && partHr != 4){
+            partHr++;
+            ans = ans + 20;
+            hr = hr++;
+        }
+        }
     }
+    }
+    }
+    cout<<"Monthly wage of an employee is "<<ans<<endl;
+    
 }
 
 
